@@ -18,6 +18,7 @@ model Catalogo {
   id Int @id @default(autoincrement())
   Titulo String
   ano Int
+  diretor String
   avaliacao Int
   categoria String
   descricao String?

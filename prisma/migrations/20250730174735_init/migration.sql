@@ -3,6 +3,7 @@ CREATE TABLE `Catalogo` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `Titulo` VARCHAR(191) NOT NULL,
     `ano` INTEGER NOT NULL,
+    `diretor` VARCHAR(191) NOT NULL,
     `avaliacao` INTEGER NOT NULL,
     `categoria` VARCHAR(191) NOT NULL,
     `descricao` VARCHAR(191) NULL,

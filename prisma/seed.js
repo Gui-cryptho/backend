@@ -6,6 +6,7 @@ async function seed() {
   data: [{
     Titulo: "Trem Bala",
     ano: 2022,
+    diretor: "David Leitch",
     avaliacao: 5,
     categoria: "action",
     descricao:
@@ -16,6 +17,7 @@ async function seed() {
   {
     Titulo: "Shrek",
     ano: 2001,
+    diretor: "Andrew Adamson",
     avaliacao: 3,
     categoria: "comedy",
     descricao:
