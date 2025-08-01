@@ -53,6 +53,6 @@ Inverte o status de favorito de um filme (true → false ou false → true).
 Remove um filme do catálogo pelo ID.
 
 🧑‍💻 Autor
-Guilherme Brito — Linkedin: www.linkedin.com/in/guilherme-brito-utfpr| GitHub: Gui-cryptho
+Guilherme Brito — Linkedin: www.linkedin.com/in/guilherme-brito-utfpr | GitHub: Gui-cryptho
 
 
