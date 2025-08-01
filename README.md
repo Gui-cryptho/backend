@@ -39,8 +39,13 @@ cd backend
 ```bash
 yarn install
 ```
+3. **Criar o Prisma Client***
+   
+````bash
+npx prisma generate
+````
 
-3. **Configure o banco de dados:**
+4. **Configure o banco de dados:**
 
 - Crie um banco MySQL local, por exemplo `catalogo_filmes`.
 - No arquivo `.env`, defina a variável `DATABASE_URL`, exemplo:
@@ -49,19 +54,19 @@ yarn install
 DATABASE_URL="mysql://usuario:senha@localhost:3306/catalogo_filmes"
 ```
 
-4. **Crie as tabelas (migrations):**
+5. **Crie as tabelas (migrations):**
 
 ```bash
 npx prisma migrate dev --name init
 ```
 
-5. **Execute a seed para inserir dados de exemplo:**
+6. **Execute a seed para inserir dados de exemplo:**
 
 ```bash
 npx prisma db seed
 ```
 
-6. **Inicie o servidor:**
+7. **Inicie o servidor:**
 
 ```bash
 yarn run dev
