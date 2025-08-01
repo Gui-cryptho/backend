@@ -8,7 +8,7 @@ async function seed() {
     ano: 2022,
     diretor: "David Leitch",
     avaliacao: 5,
-    categoria: "action",
+    categoria: "ação",
     descricao:
       "Trem-Bala é um filme de ação e comédia com Brad Pitt como um assassino azarado...",
     imagem:
@@ -19,7 +19,7 @@ async function seed() {
     ano: 2001,
     diretor: "Andrew Adamson",
     avaliacao: 3,
-    categoria: "comedy",
+    categoria: "comedia",
     descricao:
       "O filme Shrek conta a história de um ogro solitário que tem sua vida pacata em um pântano...",
     imagem:
