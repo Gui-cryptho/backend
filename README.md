@@ -1,58 +1,106 @@
 # 🎬 Catálogo de Filmes - API RESTful
 
-Esta é uma API criada com Node.js, Express e Prisma ORM que permite o gerenciamento de um catálogo de filmes, incluindo funcionalidades de listagem, busca, filtro por categoria, favoritos, adição, remoção e alteração de status de favorito.
+API criada com **Node.js**, **Express** e **Prisma ORM** para gerenciar um catálogo de filmes. Permite listar, buscar, filtrar por categoria, favoritar, adicionar, remover e alterar o status de filmes.
 
 ---
 
-## 🚀 Tecnologias
+## 🚀 Tecnologias utilizadas
 
 - Node.js
 - Express
 - Prisma ORM
-- MySQL (ou outro banco relacional suportado pelo Prisma)
-- Dockers
+- MySQL (rodando em **localhost**)
 - CORS habilitado
 
 ---
 
-## Comando de criar a migrate
+## 🛠️ Pré-requisitos
 
+Antes de iniciar o projeto, verifique se você tem os seguintes itens instalados:
+
+- Node.js e Yarn
+- MySQL rodando em `localhost` (crie um banco e configure a URL no `.env`)
+- Docker (opcional, caso deseje usar containers)
+- Prisma CLI: `npm install -g prisma`
+
+---
+
+## ⚙️ Configuração inicial
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/Gui-cryptho/backend.git
+cd backend
+```
+
+2. **Instale as dependências:**
+
+```bash
+yarn install
+```
+
+3. **Configure o banco de dados:**
+
+- Crie um banco MySQL local, por exemplo `catalogo_filmes`.
+- No arquivo `.env`, defina a variável `DATABASE_URL`, exemplo:
+
+```env
+DATABASE_URL="mysql://usuario:senha@localhost:3306/catalogo_filmes"
+```
+
+4. **Crie as tabelas (migrations):**
+
+```bash
 npx prisma migrate dev --name init
+```
 
-## Comando para usar a seed
+5. **Execute a seed para inserir dados de exemplo:**
 
+```bash
 npx prisma db seed
+```
 
-## Comando para iniciar a API
+6. **Inicie o servidor:**
 
+```bash
 yarn run dev
+```
 
-📚 Endpoints da API
-🔍 GET /view
-Retorna todos os filmes do catálogo.
+O servidor estará rodando em `http://localhost:4000`.
 
-❤️ GET /favoritos
-Retorna todos os filmes marcados como favoritos (favorito: true).
+---
 
-🔎 GET /search?titulo=nome
-Busca filmes por título (parcial ou completo).
+## 📚 Endpoints da API
 
-🎯 GET /category/:categoria
-Retorna todos os filmes com a categoria especificada.
+- 🔍 `GET /view`  
+  Retorna todos os filmes do catálogo.
 
-🔁 GET /favorito/:id
-Retorna o status de favorito de um filme específico.
+- ❤️ `GET /favoritos`  
+  Retorna todos os filmes marcados como favoritos (`favorito: true`).
 
-➕ POST /newMovie
-Adiciona um novo filme ao catálogo.
+- 🔎 `GET /search?titulo=nome`  
+  Busca filmes por título (parcial ou completo).
 
-⭐ PUT /favoritar/:id
-Inverte o status de favorito de um filme (true → false ou false → true).
+- 🎯 `GET /category/:categoria`  
+  Retorna todos os filmes com a categoria especificada.
 
-❌ DELETE /delete/:id
-Remove um filme do catálogo pelo ID.
+- 🔁 `GET /favorito/:id`  
+  Retorna o status de favorito de um filme específico.
 
-🧑‍💻 Autor
-Guilherme Brito — Linkedin: www.linkedin.com/in/guilherme-brito-utfpr | GitHub: Gui-cryptho
+- ➕ `POST /newMovie`  
+  Adiciona um novo filme ao catálogo.
 
+- ⭐ `PUT /favoritar/:id`  
+  Alterna o status de favorito de um filme (de `true` para `false` ou vice-versa).
 
+- ❌ `DELETE /delete/:id`  
+  Remove um filme do catálogo pelo ID.
+
+---
+
+## 🧑‍💻 Autor
+
+**Guilherme Brito**  
+🔗 [LinkedIn](https://www.linkedin.com/in/guilherme-brito-utfpr)  
+🐱 [GitHub](https://github.com/Gui-cryptho)
